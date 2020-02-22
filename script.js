@@ -46,10 +46,6 @@ function infoRasteniya(i){
 }
 
 // вывод всей информации на странице о выбранной персоне в классе all_info
-<<<<<<< HEAD
-=======
-
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
 function printDetailedInfo(i){
   let form = document.getElementById("all_info").getElementsByTagName("form");
   //первый инпут в форме
@@ -74,7 +70,6 @@ function printDetailedInfo(i){
         '<div class="elem">'+arrRasteniyas[i].plantKind+'</div><br>'+
         '<div class="elem">Растет в Беларуси</div>'+
         '<div class="elem">'+arrRasteniyas[i].plantBelarus+'</div><br>'+
-<<<<<<< HEAD
         '<div id="fernActive">'+
         '<div class="elem">Страна происхождения</div>'+
         '<div class="elem" id="elemPlant">'+arrRasteniyas[i].countryPlant+'</div><br>'+
@@ -91,42 +86,12 @@ function printDetailedInfo(i){
     '</div><br>'+
     '<input type="button" class="buttons" id="mainMenu2" value="Главное меню">';
 
-
 printPlantValue();
-=======
-        '<div class="elem">Страна происхождения</div>'+
-        '<div class="elem">'+arrRasteniyas[i].countryPlant+'</div><br>'+
-        '<div class="elem">Область применения</div>'+
-        '<div class="elem">'+arrRasteniyas[i].applicationPlant+'</div><br>'+
-        '<div class="elem">Первооткрыватель</div>'+
-        '<div class="elem">'+arrRasteniyas[i].discovererPlant+'</div><br>'+
-        '<div class="elem">Арея произрастания</div>'+
-        '<div class="elem">'+arrRasteniyas[i].habitatPlant+'</div><br>'+
-      '</div>'+
-      // '<div class="details">'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantName+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantsDescription+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].domainPlant+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantDepartment+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantClass+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantOrder+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantFamily+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].plantKind+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].countryPlant+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].applicationPlant+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].discovererPlant+'</div>'+
-      //   '<div class="elem">'+arrRasteniyas[i].habitatPlant+'</div>'+
-      // '</div>'+
-    '</div><br>'+
-    '<input type="button" class="buttons" id="mainMenu2" value="Главное меню">';
-
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
   document.getElementById("mainMenu2").addEventListener("click",function() {
     display("information");
   });
 }
 
-<<<<<<< HEAD
 function printPlantValue() {
   let elemPlant = document.getElementById('elemPlant');
   let elemSpruce = document.getElementById('elemSpruce');
@@ -142,8 +107,6 @@ function printPlantValue() {
   }
 }
 
-=======
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
   // отрисовка всей информации о персонах в классе info
 
 function printInfo(arrRasteniyas) {
@@ -203,11 +166,7 @@ function printInfo(arrRasteniyas) {
     });
     document.getElementById(remove).addEventListener("click",function(){
       if (confirm("Вы уверены, что хотите удалить инофрмацию о " +
-<<<<<<< HEAD
       arrRasteniyas[i].plantName + " " + arrRasteniyas[i].plantsDescription + " " + arrRasteniyas[i].domainPlant +/*arrRasteniyas[i].secondName+*/"?")) {
-=======
-      arrRasteniyas[i].plantName + arrRasteniyas[i].plantsDescription + " " + arrRasteniyas[i].domainPlant +/*arrRasteniyas[i].secondName+*/"?")) {
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
           deleteRasteniya(i,arrRasteniyas);
       } else {
 
@@ -243,190 +202,7 @@ function display(visibleId/*выбирается либо:"information" либо
   }
 }
 
-<<<<<<< HEAD
 //классы
-=======
-//родительский класс гет сет
-
-class BaseClass {
-  constructor(plantName, plantsDescription, domainPlant, plantDepartment, plantClass, plantOrder, plantFamily, plantKind, plantBelarus){
-    this.plantName = plantName;
-    this.plantsDescription = plantsDescription;
-    this.domainPlant = domainPlant;
-    this.plantDepartment = plantDepartment;
-    this.plantClass = plantClass;
-    this.plantOrder = plantOrder;
-    this.plantFamily = plantFamily;
-    this.plantKind = plantKind;
-    this.checkBtn();
-  }
-
-  get plantName(){
-    return this._plantName;
-  }
-  get plantsDescription(){
-    return this._plantsDescription;
-  }
-  get domainPlant(){
-    return this._domainPlant;
-  }
-  get plantDepartment(){
-    return this._plantDepartment;
-  }
-  get plantClass(){
-    return this._plantClass;
-  }
-  get plantOrder(){
-    return this._plantOrder;
-  }
-  get plantFamily(){
-    return this._plantFamily;
-  }
-  get plantKind(){
-    return this._plantKind;
-  }
-  // get plantBelarus() {
-  //   return this._plantBelarus;
-  // }
-
-  set plantName(value){
-    if(value.length == " "){
-      alert("Введите название растения");
-    }
-    this._plantName = value;
-  }
-
-  set plantsDescription(value){
-    if(value.length == " "){
-      alert("Введите описание");
-    }
-    this._plantsDescription = value;
-  }
-
-  set domainPlant(value){
-    if(value.length == " "){
-      alert("Введите домен растения");
-    }
-    this._domainPlant = value;
-  }
-
-  set plantDepartment(value){
-    if(value.length == " "){
-      alert("Введите отдел растения");
-    }
-    this._plantDepartment = value;
-  }
-
-  set plantClass(value){
-    if(value.length == " "){
-      alert("Введите класс растения");
-    }
-    this._plantClass = value;
-  }
-
-  set plantOrder(value){
-    if(value.length == " "){
-      alert("Введите порядок растения");
-    }
-    this._plantOrder = value;
-  }
-
-  set plantFamily(value){
-    if(value.length == " "){
-      alert("Введите семейство растения");
-    }
-    this._plantFamily = value;
-  }
-  set plantKind(value){
-    if(value.length == " "){
-      alert("Введите род растения");
-    }
-    this._plantKind = value;
-  }
-  // set plantBelarus(value){
-  //   if (plantBelarus.checked) {
-  //       this._plantBelarus = value;
-  //   }
-  // }
-  checkBtn() {
-      var radioBtn = document.getElementById('plantBelarus');
-      for (var i=0;i<radioBtn.length; i++) {
-          if (radioBtn[i].checked) {
-              return(radioBtn[i].value);
-          }
-      }
-
-  }
-
-}
-
-//наследники
-
-class OneExtendsClass extends BaseClass{
-  constructor(plantName, plantsDescription, domainPlant, plantDepartment, plantClass, plantOrder, plantFamily, plantKind, plantBelarus, countryPlant, applicationPlant){
-    super(plantName, plantsDescription, domainPlant, plantDepartment, plantClass, plantOrder, plantFamily, plantKind, plantBelarus);
-    this.countryPlant = countryPlant;
-    this.applicationPlant = applicationPlant;
-    this.type = "fern";
-  }
-
-  get countryPlant(){
-    return this._countryPlant;
-  }
-
-  set countryPlant(value){
-    if(value.length == " "){
-      alert("Введите страну происхождения растения");
-    }
-    this._countryPlant = value;
-  }
-
-  get applicationPlant() {
-    return this._applicationPlant;
-  }
-
-  set applicationPlant(value) {
-    if (value.length == " ") {
-      alert("Введите область применения растения")
-    }
-    return this._applicationPlant;
-  }
-  //**methods */
-}
-
-class TwoExtendsClass extends BaseClass{
-  constructor(plantName, plantsDescription, domainPlant, plantDepartment, plantClass, plantOrder, plantFamily, plantKind, plantBelarus, discovererPlant, habitatPlant){
-    super(plantName, plantsDescription, domainPlant, plantDepartment, plantClass, plantOrder, plantFamily, plantKind, plantBelarus);
-    this.discovererPlant = discovererPlant;//первооткрыватель
-    this.habitatPlant = habitatPlant;//ареал произрастания
-    this.type = "spruce";
-  }
-
-  get discovererPlant() {
-    return this._discovererPlant;
-  }
-
-  set discovererPlant(value) {
-    if (value.length == " ") {
-      alert("Введите первооткрыватель растения");
-    }
-    return this._discovererPlant;
-  }
-
-  get habitatPlant() {
-    return this._habitatPlant;
-  }
-
-  set habitatPlant(value) {
-    if (value.length == " ") {
-      alert("Введите ареал произрастания");
-    }
-    return this._habitatPlant;
-  }
-
-  //**methods */
-}
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
 
 
 
@@ -441,7 +217,7 @@ function checkRadio() {
 
 }
 
-<<<<<<< HEAD
+
 function checkBelarus() {//проверка на нажатый checkbox
   let checkBox = document.querySelectorAll('input.checkbox:checked');
   let checkValue = Array.from(checkBox).map(cb => cb.value);
@@ -451,8 +227,6 @@ function checkBelarus() {//проверка на нажатый checkbox
   return checkValue; //
 }
 
-=======
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
 let arrRasteniyas = []; // массив из персон
 
 
@@ -491,11 +265,8 @@ document.getElementById("createPerson").addEventListener("click", function() {
 document.getElementById("mainMenu").style.display="";
 
 
-<<<<<<< HEAD
   //checkBelarus();
-=======
 
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
   let plantName = document.getElementById("plantName").value;
   let plantsDescription = document.getElementById("descriptionPlants").value;
   let domainPlant = document.getElementById("domainPlant").value;
@@ -504,10 +275,7 @@ document.getElementById("mainMenu").style.display="";
   let plantOrder = document.getElementById("plantOrder").value;
   let plantFamily = document.getElementById("plantFamily").value;
   let plantKind = document.getElementById("plantKind").value;
-<<<<<<< HEAD
   let plantBelarus = document.getElementById("plantBelarus").value;
-=======
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
   let countryPlant = document.getElementById("countryPlant").value;
   let applicationPlant = document.getElementById("applicationPlant").value;
   let discovererPlant = document.getElementById("discovererPlant").value;
@@ -538,7 +306,3 @@ document.getElementById("mainMenu").style.display="";
 document.getElementById("mainMenu").addEventListener("click",function() {
   display("information");
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
