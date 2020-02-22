@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
+}
+#information, #create_person, #all_info {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+h1, h2 {
+  width: 100%;
+  font-size: 50px;
+  font-weight: 900;
+  color: #4B0082;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 40px;
+}
+form {
+  width: 100%;
+}
+.text_description {
+  width: 100%;
+  /* display: flex; */
+  border-bottom: 2px solid #365;
+  padding: 15px 5px;
+  border-collapse: collapse;
+}
+.text_description:nth-child(1) {
+  border-top: 2px solid #365;
+}
+.text_name {
+  width: 10%;
+  margin-right: 5px;
+  word-break: break-word;
+  padding: 10px 0;
+}
+.format {
+  display: inherit;
+  margin-top: 5px;
+}
+.format:hover, .name_radio:hover {
+  cursor: pointer;
+}
+input[name=radioExt]:checked {
+  background: green;
+}
+.strong {
+  font-size: 24px;
+  font-weight: 700;
+  word-break: break-word;
+  text-align: left;
+}
+.buttons {
+  padding: 15px;
+  font-size: 24px;
+  color: #FFF5EE;
+  background-color: #191970;
+  border-radius: 10px;
+  outline: 0;
+}
+.buttons:hover {
+  background-color: #00008B;
+  cursor: pointer;
+}
+.radio_btn {
+  margin-left: 20px;
+}
+.name_radio, .title_creat {
+  font-size: 24px;
+  margin: 0 20px;
+}
+.input_creat {
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 30%;
+}
+input[type="checkbox"] {
+  width: auto;
+}
+.name_radio input {
+  margin-right: 10px;
+  width: 20px;
+  height: 15px;
+}
+.detailInfo .elem {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  height: 30px;
+  padding: 20px;
+  border-bottom: 2px solid #365;
+  border-right: 2px solid #365;
+}
+#oneClass, #twoClass {
+  display: none;
+}
+<<<<<<< HEAD
+.oneClass, .twoClass {
+  display: none;
+}
+#spruceActive, #fernActive {
+  width: 100%;
+  /*display: none;*/
+}
+=======
+>>>>>>> c1e6bf37c03fb2b4c95771f5430b8f5d515bd13d
